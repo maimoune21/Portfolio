@@ -1,27 +1,17 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from 'react';
 
 const FadeContent = ({
   children,
   blur = false,
   duration = 1000,
-  easing = "ease-out",
+  easing = 'ease-out',
   delay = 0,
   threshold = 0.1,
   initialOpacity = 0,
-  className = "",
-  onceOnSmallScreen = false,
+  className = ''
 }) => {
   const [inView, setInView] = useState(false);
-  const [played, setPlayed] = useState(false);
   const ref = useRef(null);
-
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-  useEffect(() => {
-    const checkScreen = () => setIsSmallScreen(window.innerWidth <= 640);
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
-    return () => window.removeEventListener("resize", checkScreen);
-  }, []);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -29,12 +19,9 @@ const FadeContent = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          if (onceOnSmallScreen && isSmallScreen && played) return;
-
           observer.unobserve(ref.current);
           setTimeout(() => {
             setInView(true);
-            setPlayed(true);
           }, delay);
         }
       },
@@ -44,7 +31,7 @@ const FadeContent = ({
     observer.observe(ref.current);
 
     return () => observer.disconnect();
-  }, [threshold, delay, isSmallScreen, onceOnSmallScreen, played]);
+  }, [threshold, delay]);
 
   return (
     <div
@@ -53,7 +40,7 @@ const FadeContent = ({
       style={{
         opacity: inView ? 1 : initialOpacity,
         transition: `opacity ${duration}ms ${easing}, filter ${duration}ms ${easing}`,
-        filter: blur ? (inView ? "blur(0px)" : "blur(10px)") : "none",
+        filter: blur ? (inView ? 'blur(0px)' : 'blur(10px)') : 'none'
       }}
     >
       {children}

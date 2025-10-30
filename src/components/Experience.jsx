@@ -6,7 +6,7 @@ import SplitText from "./flowBits/SplitText";
 import FadeContent from "./flowBits/FadeContent";
 
 export const Experience = () => {
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState("education");
   const { theme } = useTheme();
 
@@ -77,7 +77,7 @@ export const Experience = () => {
 
       {/* Card */}
       <div
-        className={`w-full sm:w-1/2 max-md:w-full! ${
+        className={`w-full sm:w-1/2 max-md:w-full! max-sm:hidden ${
           item.position === "right"
             ? "sm:pl-8 sm:pr-0 max-sm:pl-8"
             : "sm:pr-8 sm:pl-0 max-md:pl-8! max-md:pr-0!"
@@ -91,7 +91,6 @@ export const Experience = () => {
           easing="ease-out"
           delay={300}
           initialOpacity={0}
-          onceOnSmallScreen
         >
           <div
             className={`p-4 rounded-lg shadow-sm flex flex-col gap-1 border-l-[5px] border-l-green-600 ${
@@ -143,6 +142,65 @@ export const Experience = () => {
             )}
           </div>
         </FadeContent>
+      </div>
+      <div
+        className={`w-full sm:w-1/2 max-md:w-full! min-sm:hidden ${
+          item.position === "right"
+            ? "sm:pl-8 sm:pr-0 max-sm:pl-8"
+            : "sm:pr-8 sm:pl-0 max-md:pl-8! max-md:pr-0!"
+        } mt-6 sm:mt-0 text-start max-sm:mt-0 sm:text-${
+          item.position === "right" ? "left" : "right"
+        }`}
+      >
+        <div
+          className={`p-4 rounded-lg shadow-sm flex flex-col gap-1 border-l-[5px] border-l-green-600 ${
+            theme === "light" ? "bg-gray-100" : "bg-[#575555]"
+          }`}
+        >
+          <h3
+            className={`font-semibold ${
+              theme === "light" ? "text-gray-800" : "text-white"
+            }`}
+          >
+            {item.title}
+          </h3>
+          <p
+            className={`text-sm ${
+              theme === "light" ? "text-gray-600" : "text-white"
+            }`}
+          >
+            {item.institution}
+          </p>
+          {item.location && (
+            <p
+              className={`text-sm ${
+                theme === "light" ? "text-gray-600" : "text-white"
+              }`}
+            >
+              {item.location}
+            </p>
+          )}
+          <p
+            className={`text-sm ${
+              theme === "light" ? "text-gray-600" : "text-white"
+            }`}
+          >
+            {item.period}
+          </p>
+          {item.description && (
+            <div
+              className={`text-sm mt-1 text-wrap break-words text-justify leading-[1.35] ${
+                theme === "light" ? "text-gray-600" : "text-white"
+              }`}
+            >
+              {item.description.split("\\n").map((line, index) => (
+                <p key={index} className={index > 0 ? "mt-1" : ""}>
+                  {line}
+                </p>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
