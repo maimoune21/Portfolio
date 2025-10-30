@@ -169,6 +169,7 @@ export const Mihna = () => {
         <FadeContent
           blur={true}
           duration={1000}
+          className="max-sm:hidden"
           easing="ease-out"
           delay={100}
           initialOpacity={0}
@@ -179,6 +180,11 @@ export const Mihna = () => {
             </h1>
           </div>
         </FadeContent>
+        <div className="flexy py-20 max-md:py-10 min-sm:hidden">
+          <h1 className="flexy text-3xl sm:text-5xl md:text-6xl lg:text-8xl w-full sm:w-4/5 md:w-3/4 lg:w-3/5 m-auto text-center font-medium leading-snug sm:leading-tight md:leading-[1] max-sm:px-5">
+            {t("Job Platform Connecting Candidates & Employers")}
+          </h1>
+        </div>
         <div className="w-[90%] sm:w-[90%] md:w-[80%] lg:w-[70%] m-auto grid sm:grid-cols-1 md:grid-cols-2 gap-5 md:gap-20 text-justify text-base sm:text-base md:text-xl font-medium">
           <FadeContent
             blur={true}
