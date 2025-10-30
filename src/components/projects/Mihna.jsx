@@ -156,23 +156,9 @@ export const Mihna = () => {
           alt="Mihna"
         />
       </div> */}
-      <FadeContent
-        blur={true}
-        duration={800}
-        className="max-sm:hidden"
-        easing="ease-out"
-        delay={100}
-        initialOpacity={0}
-      >
-        <img
-          src="/photos/projects/mihna/Mihna_laptop.png"
-          className="w-[60%] max-sm:w-[70%] m-auto rounded-xl shadow-[var(--custom-shadow)] mt-2 mb-20 max-sm:mb-10"
-          alt="Mihna"
-        />
-      </FadeContent>
       <img
         src="/photos/projects/mihna/Mihna_laptop.png"
-        className="w-[60%] max-sm:w-[70%] m-auto rounded-xl shadow-[var(--custom-shadow)] mt-2 mb-20 max-sm:mb-10 min-sm:hidden"
+        className="w-[60%] max-sm:w-[70%] m-auto rounded-xl shadow-[var(--custom-shadow)] mt-2 mb-20 max-sm:mb-10"
         alt="Mihna"
       />
       <div
