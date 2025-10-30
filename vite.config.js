@@ -5,11 +5,10 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/Portfolio/",
+  base: process.env.VITE_BASE_PATH || "/Vercel_portfolio",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "@photos": path.resolve(__dirname, "./public/photos"),
     },
   },
   server: {

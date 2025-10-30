@@ -2,7 +2,6 @@ import React from "react";
 import CodeIcon from "./ui/CodeIcon";
 import { useTheme } from "./theme-provider";
 import { useTranslation } from "react-i18next";
-import { imagePath } from "@/utils/imagePath";
 
 export const About = () => {
   const { t } = useTranslation();
@@ -21,12 +20,12 @@ export const About = () => {
         </h1>
         <div className="relative h-35 w-35 max-sm:h-30 max-sm:w-30 bg-[var(--soft-gray)] p-0 rounded-full shadow-[var(--custom-shadow)]">
           <img
-            src={`${imagePath("MM_black_text.png")}`}
+            src="/photos/MM_black_text.png"
             className="h-11 w-11 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             alt="MM"
           />
           <img
-            src={`${imagePath("/elements/text.svg")}`}
+            src="/photos/elements/text.svg"
             className="img-rotate rounded-full h-35 w-35 max-sm:h-30 max-sm:w-30"
             alt=""
           />

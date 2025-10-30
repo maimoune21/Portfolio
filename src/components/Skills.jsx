@@ -6,7 +6,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { imagePath } from "@/utils/imagePath";
 
 export const Skills = () => {
   const { t } = useTranslation();
@@ -185,16 +184,15 @@ export const Skills = () => {
             <Tooltip>
               <TooltipTrigger>
                 <img
-                src={`${imagePath(`stacks/${stack.logo}`)}`}
-                className=
-                {`${
-                  stack.title === "TailwindCSS"
-                    ? "h-6.5 max-sm:h-5.5 max-[400px]:h-5! mt-1"
-                    : stack.title === "PHP"
-                    ? "h-6.5 max-sm:h-5.5 max-[400px]:h-5! mt-1"
-                    : "h-8 max-sm:h-8 max-[400px]:h-7!"
-                }`}
-                alt={stack.title}
+                  src={`/photos/stacks/${stack.logo}`}
+                  className={`${
+                    stack.title === "TailwindCSS"
+                      ? "h-6.5 max-sm:h-5.5 max-[400px]:h-5! mt-1"
+                      : stack.title === "PHP"
+                      ? "h-6.5 max-sm:h-5.5 max-[400px]:h-5! mt-1"
+                      : "h-8 max-sm:h-8 max-[400px]:h-7!"
+                  }`}
+                  alt={stack.title}
                 />
               </TooltipTrigger>
               <TooltipContent className="min-sm:hidden">
