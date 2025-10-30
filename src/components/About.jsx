@@ -72,7 +72,7 @@ export const About = () => {
             delay={0.1}
           >
             <div
-              className={`flexy gap-4 shadow-sm rounded-full py-2.5 px-5 ${
+              className={`flexy gap-4 shadow-sm rounded-xl py-2.5 px-5 ${
                 theme === "light" ? "bg-[var(--soft-gray)]" : "bg-[#676464]"
               }`}
             >
@@ -93,7 +93,7 @@ export const About = () => {
             delay={0.2}
           >
             <div
-              className={`flexy gap-4 shadow-sm rounded-full py-2.5 px-5 ${
+              className={`flexy gap-4 shadow-sm rounded-xl py-2.5 px-5 ${
                 theme === "light" ? "bg-[var(--soft-gray)]" : "bg-[#676464]"
               }`}
             >

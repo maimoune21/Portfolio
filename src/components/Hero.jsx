@@ -166,7 +166,7 @@ export const Hero = () => {
                   href={`/docs/${i18n.language}_CV.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flexy font-bold text-sm gap-2 py-2 rounded-full px-4 shadow-md ButtonHover ${
+                  className={`flexy font-bold text-sm gap-2 py-2 rounded-full px-4 shadow-md ButtonHover click-sound ${
                     theme === "light" ? "bg-[#d9e2e9]" : "bg-[#434141]"
                   }`}
                 >

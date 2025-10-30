@@ -138,7 +138,7 @@ export const Contact = () => {
           <Button
             variant="outline"
             type="submit"
-            className="w-full shadow-sm h-12 cursor-pointer font-semibold"
+            className="w-full shadow-sm h-12 cursor-pointer font-semibold click-sound"
           >
             {t("Send Message")}
           </Button>
