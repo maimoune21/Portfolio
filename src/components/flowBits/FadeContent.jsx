@@ -9,9 +9,19 @@ const FadeContent = ({
   threshold = 0.1,
   initialOpacity = 0,
   className = "",
+  onceOnSmallScreen = false,
 }) => {
   const [inView, setInView] = useState(false);
+  const [played, setPlayed] = useState(false);
   const ref = useRef(null);
+
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  useEffect(() => {
+    const checkScreen = () => setIsSmallScreen(window.innerWidth <= 640);
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -19,9 +29,12 @@ const FadeContent = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          if (onceOnSmallScreen && isSmallScreen && played) return;
+
           observer.unobserve(ref.current);
           setTimeout(() => {
             setInView(true);
+            setPlayed(true);
           }, delay);
         }
       },
@@ -31,7 +44,7 @@ const FadeContent = ({
     observer.observe(ref.current);
 
     return () => observer.disconnect();
-  }, [threshold, delay]);
+  }, [threshold, delay, isSmallScreen, onceOnSmallScreen, played]);
 
   return (
     <div

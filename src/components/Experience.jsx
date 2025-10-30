@@ -91,6 +91,7 @@ export const Experience = () => {
           easing="ease-out"
           delay={300}
           initialOpacity={0}
+          onceOnSmallScreen
         >
           <div
             className={`p-4 rounded-lg shadow-sm flex flex-col gap-1 border-l-[5px] border-l-green-600 ${
