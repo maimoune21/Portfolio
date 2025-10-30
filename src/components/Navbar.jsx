@@ -61,8 +61,8 @@ export const Navbar = () => {
         <img
           src={
             theme === "light"
-              ? "/photos/MM_black_text.png"
-              : "/photos/MM_white_text.png"
+              ? "../../public/photos/MM_black_text.png"
+              : "../../public/photos/MM_white_text.png"
           }
           alt="MM"
           className="h-8 w-8 cursor-pointer"
