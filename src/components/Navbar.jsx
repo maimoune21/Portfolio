@@ -31,6 +31,7 @@ import {
 import { Contact } from "./Contact";
 import { useTheme } from "./theme-provider";
 import { useTranslation } from "react-i18next";
+import { imagePath } from "@/utils/imagePath";
 
 export const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -43,10 +44,10 @@ export const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const { theme } = useTheme();
   const languages = [
-    { id: 1, name: "Français", code: "fr", photo: "/photos/fr.svg" },
-    { id: 2, name: "English", code: "en", photo: "/photos/gb.svg" },
-    { id: 3, name: "Spanish", code: "es", photo: "/photos/es.svg" },
-    { id: 4, name: "German", code: "de", photo: "/photos/de.svg" },
+    { id: 1, name: "Français", code: "fr", photo: "fr.svg" },
+    { id: 2, name: "English", code: "en", photo: "gb.svg" },
+    { id: 3, name: "Spanish", code: "es", photo: "es.svg" },
+    { id: 4, name: "German", code: "de", photo: "de.svg" },
   ];
 
   return (
@@ -61,8 +62,8 @@ export const Navbar = () => {
         <img
           src={
             theme === "light"
-              ? "../../public/photos/MM_black_text.png"
-              : "../../public/photos/MM_white_text.png"
+              ? `${imagePath("MM_black_text.png")}`
+              : `${imagePath("MM_white_text.png")}`
           }
           alt="MM"
           className="h-8 w-8 cursor-pointer"
@@ -270,10 +271,10 @@ export const Navbar = () => {
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
             <img
-              src={
+              src={imagePath(
                 languages.find((lang) => lang.code === i18n.language)?.photo ||
-                "/photos/Globe.png"
-              }
+                  "Globe.png"
+              )}
               className="rounded-full h-6 w-6 cursor-pointer"
               alt="fr"
             />
@@ -292,7 +293,7 @@ export const Navbar = () => {
                         onSelect={() => changeLanguage(language.code)}
                       >
                         <img
-                          src={language.photo}
+                          src={`${imagePath(`${language.photo}`)}`}
                           className="rounded-full h-5 w-5"
                           alt={language.code}
                         />
