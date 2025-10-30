@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: process.env.VITE_BASE_PATH || "/Vercel_portfolio",
+  // base: process.env.VITE_BASE_PATH || "/Vercel_portfolio",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

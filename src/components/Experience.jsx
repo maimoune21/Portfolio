@@ -2,9 +2,11 @@ import { Award, BriefcaseBusiness, GraduationCap } from "lucide-react";
 import React, { useState, useRef, useLayoutEffect } from "react";
 import { useTheme } from "./theme-provider";
 import { useTranslation } from "react-i18next";
+import SplitText from "./flowBits/SplitText";
+import FadeContent from "./flowBits/FadeContent";
 
 export const Experience = () => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState("education");
   const { theme } = useTheme();
 
@@ -57,7 +59,9 @@ export const Experience = () => {
   const TimelineItem = ({ item }) => (
     <div
       className={`flex flex-col sm:flex-row w-full mb-8 relative ${
-        item.position === "right" ? "sm:justify-end max-md:justify-start!" : "max-md:justify-start!"
+        item.position === "right"
+          ? "sm:justify-end max-md:justify-start!"
+          : "max-md:justify-start!"
       }`}
     >
       {/* Center Icon */}
@@ -74,74 +78,98 @@ export const Experience = () => {
       {/* Card */}
       <div
         className={`w-full sm:w-1/2 max-md:w-full! ${
-          item.position === "right" ? "sm:pl-8 sm:pr-0 max-sm:pl-8" : "sm:pr-8 sm:pl-0 max-md:pl-8! max-md:pr-0!"
+          item.position === "right"
+            ? "sm:pl-8 sm:pr-0 max-sm:pl-8"
+            : "sm:pr-8 sm:pl-0 max-md:pl-8! max-md:pr-0!"
         } mt-6 sm:mt-0 text-start max-sm:mt-0 sm:text-${
           item.position === "right" ? "left" : "right"
         }`}
       >
-        <div
-          className={`p-4 rounded-lg shadow-sm flex flex-col gap-1 border-l-[5px] border-l-green-600 ${
-            theme === "light" ? "bg-gray-100" : "bg-[#575555]"
-          }`}
+        <FadeContent
+          blur={true}
+          duration={1100}
+          easing="ease-out"
+          delay={300}
+          initialOpacity={0}
         >
-          <h3
-            className={`font-semibold ${
-              theme === "light" ? "text-gray-800" : "text-white"
+          <div
+            className={`p-4 rounded-lg shadow-sm flex flex-col gap-1 border-l-[5px] border-l-green-600 ${
+              theme === "light" ? "bg-gray-100" : "bg-[#575555]"
             }`}
           >
-            {item.title}
-          </h3>
-          <p
-            className={`text-sm ${
-              theme === "light" ? "text-gray-600" : "text-white"
-            }`}
-          >
-            {item.institution}
-          </p>
-          {item.location && (
+            <h3
+              className={`font-semibold ${
+                theme === "light" ? "text-gray-800" : "text-white"
+              }`}
+            >
+              {item.title}
+            </h3>
             <p
               className={`text-sm ${
                 theme === "light" ? "text-gray-600" : "text-white"
               }`}
             >
-              {item.location}
+              {item.institution}
             </p>
-          )}
-          <p
-            className={`text-sm ${
-              theme === "light" ? "text-gray-600" : "text-white"
-            }`}
-          >
-            {item.period}
-          </p>
-          {item.description && (
-            <div
-              className={`text-sm mt-1 text-wrap break-words text-justify leading-[1.35] ${
+            {item.location && (
+              <p
+                className={`text-sm ${
+                  theme === "light" ? "text-gray-600" : "text-white"
+                }`}
+              >
+                {item.location}
+              </p>
+            )}
+            <p
+              className={`text-sm ${
                 theme === "light" ? "text-gray-600" : "text-white"
               }`}
             >
-              {item.description.split("\\n").map((line, index) => (
-                <p key={index} className={index > 0 ? "mt-1" : ""}>
-                  {line}
-                </p>
-              ))}
-            </div>
-          )}
-        </div>
+              {item.period}
+            </p>
+            {item.description && (
+              <div
+                className={`text-sm mt-1 text-wrap break-words text-justify leading-[1.35] ${
+                  theme === "light" ? "text-gray-600" : "text-white"
+                }`}
+              >
+                {item.description.split("\\n").map((line, index) => (
+                  <p key={index} className={index > 0 ? "mt-1" : ""}>
+                    {line}
+                  </p>
+                ))}
+              </div>
+            )}
+          </div>
+        </FadeContent>
       </div>
     </div>
   );
 
   return (
     <section id="experience" className="mt-20 px-4 sm:px-0">
-      <h1 className="flexy font-bold text-2xl">{t("Education & Experience")}</h1>
+      <SplitText
+        key={i18n.language}
+        text={t("Education & Experience")}
+        tag="h1"
+        className="flexy font-bold text-2xl gap-2"
+        delay={20}
+        duration={0.2}
+        ease="power3.out"
+        splitType="chars"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+      />
 
       {/* Tabs */}
       <div className="mt-10 relative flex flex-col w-[80%] max-lg:w-[90%] max-md:w-[80%] max-sm:w-[90%] m-auto">
         <div className="flexy gap-16 relative overflow-x-auto scrollbar-hidden">
           {["education", "experience"].map((key, index) => {
             const isActive = activeTab === key;
-            const label = key === "education" ? t("Education") : t("Experience");
+            const label =
+              key === "education" ? t("Education") : t("Experience");
 
             return (
               <button
@@ -154,7 +182,11 @@ export const Experience = () => {
                     : "text-[var(--icons-color)] hover:text-[var(--text-dark)]"
                 }`}
               >
-                {key === "education" ? <GraduationCap /> : <BriefcaseBusiness />}
+                {key === "education" ? (
+                  <GraduationCap />
+                ) : (
+                  <BriefcaseBusiness />
+                )}
                 <p className="font-bold">{label}</p>
               </button>
             );

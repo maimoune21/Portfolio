@@ -6,9 +6,11 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import SplitText from "./flowBits/SplitText";
+import FadeContent from "./flowBits/FadeContent";
 
 export const Skills = () => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState("Frontend");
   const [underlineStyle, setUnderlineStyle] = useState({});
   const tabsRef = useRef([]);
@@ -132,8 +134,20 @@ export const Skills = () => {
 
   return (
     <section id="skills" className="pt-15 max-sm:pt-5 max-sm:w-full m-auto">
-      <h1 className="flexy font-bold text-2xl">{t("Skills & Technologies")}</h1>
-
+      <SplitText
+        key={i18n.language}
+        text={t("Skills & Technologies")}
+        tag="h1"
+        className="flexy font-bold text-2xl gap-2"
+        delay={20}
+        duration={0.2}
+        ease="power3.out"
+        splitType="chars"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+      />
       <div
         id="tabs-container"
         className="relative flex overflow-x-auto max-[500px]:justify-start! sm:justify-center gap-6 sm:gap-10 mt-10 cursor-pointer scrollbar-hidden select-none rounded-xs px-5 min-[550px]:shadow-none! min-[550px]:justify-center!"
@@ -182,19 +196,26 @@ export const Skills = () => {
             className="flex flex-col items-center bg-[var(--bg-skills-2)] max-sm:bg-transparent max-sm:shadow-none py-3 max-sm:py-1 rounded-xl gap-2 shadow-sm max-sm:w-fit max-sm:m-auto"
           >
             <Tooltip>
-              <TooltipTrigger>
-                <img
-                  src={`/photos/stacks/${stack.logo}`}
-                  className={`${
-                    stack.title === "TailwindCSS"
-                      ? "h-6.5 max-sm:h-5.5 max-[400px]:h-5! mt-1"
-                      : stack.title === "PHP"
-                      ? "h-6.5 max-sm:h-5.5 max-[400px]:h-5! mt-1"
-                      : "h-8 max-sm:h-8 max-[400px]:h-7!"
-                  }`}
-                  alt={stack.title}
-                />
-              </TooltipTrigger>
+              <FadeContent
+                blur={true}
+                duration={1100}
+                easing="ease-out"
+                initialOpacity={0}
+              >
+                <TooltipTrigger>
+                  <img
+                    src={`/photos/stacks/${stack.logo}`}
+                    className={`${
+                      stack.title === "TailwindCSS"
+                        ? "h-6.5 max-sm:h-5.5 max-[400px]:h-5! mt-1"
+                        : stack.title === "PHP"
+                        ? "h-6.5 max-sm:h-5.5 max-[400px]:h-5! mt-1"
+                        : "h-8 max-sm:h-8 max-[400px]:h-7!"
+                    }`}
+                    alt={stack.title}
+                  />
+                </TooltipTrigger>
+              </FadeContent>
               <TooltipContent className="min-sm:hidden">
                 <p>{stack.title}</p>
               </TooltipContent>

@@ -296,3 +296,10 @@ body {
   }
 }
 
+/* <FadeContent
+          blur={true}
+          duration={1000}
+          easing="ease-out"
+          delay={300}
+          initialOpacity={0}
+        ></FadeContent> */

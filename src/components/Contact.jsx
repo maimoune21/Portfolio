@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,6 +8,7 @@ import WeatherDisplay from "@/api/WeatherDisplay ";
 import { useTheme } from "./theme-provider";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
+import FadeContent from "./flowBits/FadeContent";
 
 export const Contact = () => {
   const { t, i18n } = useTranslation();
@@ -41,39 +42,69 @@ export const Contact = () => {
   return (
     <section className="pb-0">
       <div className="flexy flex-col pt-15 max-sm:pt-20">
-        <img
-          src={`${
-            theme === "light"
-              ? "/photos/MM_black_text.png"
-              : "/photos/MM_white_text.png"
-          }`}
-          alt="MM"
-          className="h-11 w-11 flexy"
-        />
+        <FadeContent
+          blur={true}
+          duration={1100}
+          easing="ease-out"
+          initialOpacity={0}
+        >
+          <img
+            src={`${
+              theme === "light"
+                ? "/photos/MM_black_text.png"
+                : "/photos/MM_white_text.png"
+            }`}
+            alt="MM"
+            className="h-11 w-11 flexy"
+          />
+        </FadeContent>
         <div
           className={`flexy absolute top-10 max-sm:top-6 right-12 max-[850px]:right-4 h-10 max-[850px]:h-8 max-h-10 font-bold text-base rounded-full px-6 max-sm:px-4 shadow-[var(--custom-shadow)] ${
             theme === "light" ? "bg-[#16a34a17]" : "bg-[#00bf6340]"
           }`}
         >
-          <span
-            className={`pulse relative w-1.5 aspect-square rounded-full mr-4 ${
-              theme === "light" ? "bg-green-600" : "bg-green-400"
-            }`}
+          <FadeContent
+            blur={true}
+            duration={1000}
+            easing="ease-out"
+            initialOpacity={0}
+            delay={200}
           >
-            <span
-              className={`absolute inset-0 rounded-full animate-ping [animation-delay:3s] [animation-duration:1.5s] ${
-                theme === "light" ? "bg-green-600" : "bg-green-400"
-              }`}
-            ></span>
-          </span>
-          <p className="text-sm max-[850px]:text-xs">{t("Available for work")}</p>
+            <div className="flexy">
+              <span
+                className={`pulse relative w-1.5 aspect-square rounded-full mr-4 ${
+                  theme === "light" ? "bg-green-600" : "bg-green-400"
+                }`}
+              >
+                <span
+                  className={`absolute inset-0 rounded-full animate-ping [animation-delay:3s] [animation-duration:1.5s] ${
+                    theme === "light" ? "bg-green-600" : "bg-green-400"
+                  }`}
+                ></span>
+              </span>
+              <p className="text-sm max-[850px]:text-xs">
+                {t("Available for work")}
+              </p>
+            </div>
+          </FadeContent>
         </div>
-        <h1 className="mt-6 font-bold text-3xl max-sm:text-xl">
-          {t("Let's start a project together")} 🤝
-        </h1>
+        <FadeContent
+          blur={true}
+          duration={1000}
+          easing="ease-out"
+          initialOpacity={0}
+          delay={300}
+        >
+          <h1 className="mt-6 font-bold text-3xl max-sm:text-xl">
+            {t("Let's start a project together")} 🤝
+          </h1>
+        </FadeContent>
       </div>
       <div className="grid grid-cols-[1fr_1fr] max-[850px]:grid-cols-1 w-[78%] max-sm:w-full max-[1050px]:w-[90%] m-auto gap-20 max-sm:gap-15 max-lg:gap-10 mt-10">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-sm:px-10">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-3 max-sm:px-10"
+        >
           <span className="flex flex-col gap-1">
             <Label htmlFor="name">{t("Name")}</Label>
             <Input
