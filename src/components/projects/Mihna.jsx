@@ -159,6 +159,7 @@ export const Mihna = () => {
       <FadeContent
         blur={true}
         duration={800}
+        className="max-sm:hidden"
         easing="ease-out"
         delay={100}
         initialOpacity={0}
@@ -169,6 +170,11 @@ export const Mihna = () => {
           alt="Mihna"
         />
       </FadeContent>
+      <img
+        src="/photos/projects/mihna/Mihna_laptop.png"
+        className="w-[60%] max-sm:w-[70%] m-auto rounded-xl shadow-[var(--custom-shadow)] mt-2 mb-20 max-sm:mb-10 min-sm:hidden"
+        alt="Mihna"
+      />
       <div
         className={`pb-30 w-full font-["CabinetGrotesk"] ${
           theme === "light" ? "bg-[#eaeaea]" : "bg-[#000]"

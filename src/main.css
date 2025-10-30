@@ -89,6 +89,7 @@ body {
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   animation: blob 4s ease-in-out infinite;
 }
+
 .img-rotate {
   @apply inline-block w-[19rem];
   animation: rotate 8s linear infinite;

@@ -311,7 +311,7 @@ export const Hero = () => {
             cursorCharacter="|"
           />
         </span>
-        <div className="hero-img h-72 max-[450px]:h-50! max-[900px]:h-55 max-lg:h-65 w-80 max-[900px]:w-60 max-[450px]:w-55! max-lg:w-70 max-[900px]:order-1"></div>
+        <div className="relative hero-img h-72 max-[450px]:h-50! max-[900px]:h-55 max-lg:h-65 w-80 max-[900px]:w-60 max-[450px]:w-55! max-lg:w-70 max-[900px]:order-1"></div>
       </div>
       <div className="flexy">
         <span className="flexy flex-col gap-3 max-sm:gap-2 max-sm:text-sm">
