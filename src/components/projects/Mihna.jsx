@@ -180,7 +180,7 @@ export const Mihna = () => {
             </h1>
           </div>
         </FadeContent>
-        <div className="flexy py-20 max-md:py-10 min-sm:hidden">
+        <div className="flexy py-20 max-md:py-10 min-sm:hidden!">
           <h1 className="flexy text-3xl sm:text-5xl md:text-6xl lg:text-8xl w-full sm:w-4/5 md:w-3/4 lg:w-3/5 m-auto text-center font-medium leading-snug sm:leading-tight md:leading-[1] max-sm:px-5">
             {t("Job Platform Connecting Candidates & Employers")}
           </h1>
@@ -215,7 +215,7 @@ export const Mihna = () => {
         >
           <img
             src={`/photos/projects/mihna/${i18n.language}_Mihna_user_stories.png`}
-            className="flexy m-auto aspect-video rounded-2xl mt-10 sm:mt-12 md:mt-20 w-[60%] max-lg:w-[80%] max-sm:w-[90%]"
+            className="flexy m-auto aspect-video rounded-4xl mt-10 sm:mt-12 md:mt-20 w-[60%] max-lg:w-[80%] max-sm:w-[90%]"
             alt="Mihna"
           />
         </FadeContent>
@@ -229,7 +229,7 @@ export const Mihna = () => {
         >
           <img
             src={`/photos/projects/mihna/${i18n.language}_Mihna_problems.png`}
-            className="flexy m-auto aspect-video rounded-2xl mt-5 sm:mt-5 md:mt-10 w-[60%] max-lg:w-[80%] max-sm:w-[90%]"
+            className="flexy m-auto aspect-video rounded-4xl mt-5 sm:mt-5 md:mt-10 w-[60%] max-lg:w-[80%] max-sm:w-[90%]"
             alt="Mihna"
           />
         </FadeContent>

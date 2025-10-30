@@ -4,21 +4,21 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: 'CabinetGrotesk';
-  src: url('/fonts/CabinetGrotesk-Regular.otf') format('opentype');
+  font-family: "CabinetGrotesk";
+  src: url("/fonts/CabinetGrotesk-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CabinetGrotesk';
-  src: url('/fonts/CabinetGrotesk-Medium.otf') format('opentype');
+  font-family: "CabinetGrotesk";
+  src: url("/fonts/CabinetGrotesk-Medium.otf") format("opentype");
   font-weight: 6900;
   font-style: medium;
 }
 @font-face {
-  font-family: 'CabinetGrotesk';
-  src: url('/fonts/CabinetGrotesk-Bold.otf') format('opentype');
+  font-family: "CabinetGrotesk";
+  src: url("/fonts/CabinetGrotesk-Bold.otf") format("opentype");
   font-weight: 900;
   font-style: bold;
 }
@@ -37,7 +37,7 @@
   --icons-color: #474747;
   --icons-color-2: #636262;
   --custom-shadow: 0 2px 5px 1px hsla(0, 0%, 0%, 0.2);
-  
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -89,10 +89,27 @@ body {
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   animation: blob 4s ease-in-out infinite;
 }
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
 
 .img-rotate {
   @apply inline-block w-[19rem];
   animation: rotate 8s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* SideBar Custom Styling */
@@ -115,23 +132,6 @@ body {
   background: rgb(100, 100, 100);
 }
 
-@keyframes blob {
-  0%,
-  100% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-  50% {
-    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-  }
-}
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes upDown {
   0%,
   100% {
@@ -284,7 +284,7 @@ body {
   @apply max-sm:bg-transparent max-sm:border-none shadow-none;
 }
 .CarouselNext {
-  @apply max-sm:bg-transparent max-sm:border-none shadow-none
+  @apply max-sm:bg-transparent max-sm:border-none shadow-none;
 }
 @media (max-width: 640px) {
   .CarouselNext {
@@ -295,4 +295,8 @@ body {
   .CarouselNext {
     @apply -right-3!;
   }
+}
+
+.ButtonHover {
+  @apply transition duration-300 ease-in-out hover:scale-105;
 }

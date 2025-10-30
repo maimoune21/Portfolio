@@ -75,7 +75,7 @@ function SheetContent({
 
         <SheetPrimitive.Close
           className={cn(
-            "fixed left-6 top-6 p-3 max-md:p-2 rounded-full shadow-sm backdrop-blur-md bg-[var(--soft-gray)] hover:bg-[var(--soft-gray)] transition",
+            "fixed left-6 top-6 p-3 max-md:p-2 rounded-full shadow-sm backdrop-blur-md bg-[var(--soft-gray)] hover:bg-[var(--soft-gray)] transition click-sound",
             "opacity-70 hover:opacity-100 focus:outline-none cursor-pointer",
             closeClassName
           )}

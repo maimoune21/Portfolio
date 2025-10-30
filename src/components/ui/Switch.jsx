@@ -15,7 +15,7 @@ const Switch = () => {
     <StyledWrapper>
       <label
         htmlFor="themeToggle"
-        className="themeToggle st-sunMoonThemeToggleBtn"
+        className="themeToggle st-sunMoonThemeToggleBtn click-sound"
       >
         <input
           type="checkbox"

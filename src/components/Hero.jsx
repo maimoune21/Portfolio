@@ -16,6 +16,7 @@ import FadeContent from "./flowBits/FadeContent";
 import SplitText from "./flowBits/SplitText";
 import TextType from "./flowBits/TextType";
 import AnimatedContent from "./flowBits/AnimatedContent";
+import { Link } from "react-scroll";
 
 export const Hero = () => {
   const { t, i18n } = useTranslation();
@@ -99,13 +100,13 @@ export const Hero = () => {
               </svg>
               <a
                 href="mailto:mohamedmaimouneh@gmail.com"
-                className="max-sm:text-sm"
+                className="max-sm:text-sm hover:underline"
               >
                 mohamadmaimouneh@gmail.com
               </a>
             </div>
           </FadeContent>
-          <div className="flexy justify-start! max-[900px]:justify-center! max-sm:flex-col gap-4 mt-4">
+          <div className="flexy justify-start! max-[900px]:justify-center! max-sm:flex-col gap-3 mt-4">
             <div className="flexy gap-4">
               <AnimatedContent
                 distance={30}
@@ -121,7 +122,7 @@ export const Hero = () => {
               >
                 <Sheet>
                   <SheetTrigger
-                    className={`flexy gap-2 font-menu cursor-pointer py-2 px-3 rounded-full shadow-md ${
+                    className={`flexy gap-2 cursor-pointer py-2 px-4 rounded-full shadow-md ButtonHover click-sound ${
                       theme === "light" ? "bg-[#d9e2e9]" : "bg-[#434141]"
                     }`}
                   >
@@ -137,7 +138,7 @@ export const Hero = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <p className="font-bold text-sm">{t("Contact")}</p>
+                    <p className="font-bold text-sm mt-0.5">{t("Contact")}</p>
                   </SheetTrigger>
                   <SheetContent side="bottom" className="w-full h-[100vh]">
                     <SheetHeader>
@@ -165,7 +166,7 @@ export const Hero = () => {
                   href={`/docs/${i18n.language}_CV.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flexy font-bold text-sm gap-2 py-2 rounded-full px-3 shadow-md ${
+                  className={`flexy font-bold text-sm gap-2 py-2 rounded-full px-4 shadow-md ButtonHover ${
                     theme === "light" ? "bg-[#d9e2e9]" : "bg-[#434141]"
                   }`}
                 >
@@ -198,91 +199,101 @@ export const Hero = () => {
               </AnimatedContent>
             </div>
             <div className="flexy gap-3 ml-2">
-              <FadeContent
-                blur={true}
-                duration={1000}
-                easing="ease-out"
-                delay={250}
-                initialOpacity={0}
-              >
-                <a href="https://linkedin.com/in/maimoune">
-                  <svg
-                    viewBox="0 0 20 20"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                    className="size-5.5"
-                    fill="#000000"
-                  >
-                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      {" "}
-                      <title>linkedin [#919191161]</title>{" "}
-                      <desc>Created with Sketch.</desc> <defs> </defs>{" "}
+              <div className="ButtonHover">
+                <FadeContent
+                  blur={true}
+                  className={`flexy p-2.5 shadow-[var(--custom-shadow)] rounded-full ${
+                    theme === "light" ? "bg-[#d9e2e9]" : "bg-[#434141]"
+                  }`}
+                  duration={1000}
+                  easing="ease-out"
+                  delay={250}
+                  initialOpacity={0}
+                >
+                  <a href="https://linkedin.com/in/maimoune">
+                    <svg
+                      viewBox="0 0 20 20"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                      className="size-4.5"
+                      fill="#000000"
+                    >
+                      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                       <g
-                        id="Page-1"
-                        stroke="none"
-                        strokeWidth="1"
-                        fill="none"
-                        fillRule="evenodd"
-                      >
+                        id="SVGRepo_tracerCarrier"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
                         {" "}
+                        <title>linkedin [#919191161]</title>{" "}
+                        <desc>Created with Sketch.</desc> <defs> </defs>{" "}
                         <g
-                          id="Dribbble-Light-Preview"
-                          transform="translate(-180.000000, -7479.000000)"
-                          fill="var(--icons-color)"
+                          id="Page-1"
+                          stroke="none"
+                          strokeWidth="1"
+                          fill="none"
+                          fillRule="evenodd"
                         >
                           {" "}
                           <g
-                            id="icons"
-                            transform="translate(56.000000, 160.000000)"
+                            id="Dribbble-Light-Preview"
+                            transform="translate(-180.000000, -7479.000000)"
+                            fill="var(--icons-color)"
                           >
                             {" "}
-                            <path
-                              d="M144,7339 L140,7339 L140,7332.001 C140,7330.081 139.153,7329.01 137.634,7329.01 C135.981,7329.01 135,7330.126 135,7332.001 L135,7339 L131,7339 L131,7326 L135,7326 L135,7327.462 C135,7327.462 136.255,7325.26 139.083,7325.26 C141.912,7325.26 144,7326.986 144,7330.558 L144,7339 L144,7339 Z M126.442,7323.921 C125.093,7323.921 124,7322.819 124,7321.46 C124,7320.102 125.093,7319 126.442,7319 C127.79,7319 128.883,7320.102 128.883,7321.46 C128.884,7322.819 127.79,7323.921 126.442,7323.921 L126.442,7323.921 Z M124,7339 L129,7339 L129,7326 L124,7326 L124,7339 Z"
-                              id="linkedin-[#919191161]"
+                            <g
+                              id="icons"
+                              transform="translate(56.000000, 160.000000)"
                             >
                               {" "}
-                            </path>{" "}
+                              <path
+                                d="M144,7339 L140,7339 L140,7332.001 C140,7330.081 139.153,7329.01 137.634,7329.01 C135.981,7329.01 135,7330.126 135,7332.001 L135,7339 L131,7339 L131,7326 L135,7326 L135,7327.462 C135,7327.462 136.255,7325.26 139.083,7325.26 C141.912,7325.26 144,7326.986 144,7330.558 L144,7339 L144,7339 Z M126.442,7323.921 C125.093,7323.921 124,7322.819 124,7321.46 C124,7320.102 125.093,7319 126.442,7319 C127.79,7319 128.883,7320.102 128.883,7321.46 C128.884,7322.819 127.79,7323.921 126.442,7323.921 L126.442,7323.921 Z M124,7339 L129,7339 L129,7326 L124,7326 L124,7339 Z"
+                                id="linkedin-[#919191161]"
+                              >
+                                {" "}
+                              </path>{" "}
+                            </g>{" "}
                           </g>{" "}
                         </g>{" "}
-                      </g>{" "}
-                    </g>
-                  </svg>
-                </a>
-              </FadeContent>
-              <FadeContent
-                blur={true}
-                duration={1000}
-                easing="ease-out"
-                delay={250}
-                initialOpacity={0}
-              >
-                <a href="https://github.com/maimoune21">
-                  <svg
-                    fill="var(--icons-color)"
-                    viewBox="-2.5 0 19 19"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="size-7"
-                    stroke=""
-                  >
-                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path d="M9.464 17.178a4.506 4.506 0 0 1-2.013.317 4.29 4.29 0 0 1-2.007-.317.746.746 0 0 1-.277-.587c0-.22-.008-.798-.012-1.567-2.564.557-3.105-1.236-3.105-1.236a2.44 2.44 0 0 0-1.024-1.348c-.836-.572.063-.56.063-.56a1.937 1.937 0 0 1 1.412.95 1.962 1.962 0 0 0 2.682.765 1.971 1.971 0 0 1 .586-1.233c-2.046-.232-4.198-1.023-4.198-4.554a3.566 3.566 0 0 1 .948-2.474 3.313 3.313 0 0 1 .091-2.438s.773-.248 2.534.945a8.727 8.727 0 0 1 4.615 0c1.76-1.193 2.532-.945 2.532-.945a3.31 3.31 0 0 1 .092 2.438 3.562 3.562 0 0 1 .947 2.474c0 3.54-2.155 4.32-4.208 4.548a2.195 2.195 0 0 1 .625 1.706c0 1.232-.011 2.227-.011 2.529a.694.694 0 0 1-.272.587z"></path>
-                    </g>
-                  </svg>
-                </a>
-              </FadeContent>
+                      </g>
+                    </svg>
+                  </a>
+                </FadeContent>
+              </div>
+              <div className="ButtonHover">
+                <FadeContent
+                  blur={true}
+                  duration={1000}
+                  className={`flexy p-2 shadow-[var(--custom-shadow)] rounded-full ${
+                    theme === "light" ? "bg-[#d9e2e9]" : "bg-[#434141]"
+                  }`}
+                  easing="ease-out"
+                  delay={250}
+                  initialOpacity={0}
+                >
+                  <a href="https://github.com/maimoune21">
+                    <svg
+                      fill="var(--icons-color)"
+                      viewBox="-2.5 0 19 19"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="size-5.5"
+                      stroke=""
+                    >
+                      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path d="M9.464 17.178a4.506 4.506 0 0 1-2.013.317 4.29 4.29 0 0 1-2.007-.317.746.746 0 0 1-.277-.587c0-.22-.008-.798-.012-1.567-2.564.557-3.105-1.236-3.105-1.236a2.44 2.44 0 0 0-1.024-1.348c-.836-.572.063-.56.063-.56a1.937 1.937 0 0 1 1.412.95 1.962 1.962 0 0 0 2.682.765 1.971 1.971 0 0 1 .586-1.233c-2.046-.232-4.198-1.023-4.198-4.554a3.566 3.566 0 0 1 .948-2.474 3.313 3.313 0 0 1 .091-2.438s.773-.248 2.534.945a8.727 8.727 0 0 1 4.615 0c1.76-1.193 2.532-.945 2.532-.945a3.31 3.31 0 0 1 .092 2.438 3.562 3.562 0 0 1 .947 2.474c0 3.54-2.155 4.32-4.208 4.548a2.195 2.195 0 0 1 .625 1.706c0 1.232-.011 2.227-.011 2.529a.694.694 0 0 1-.272.587z"></path>
+                      </g>
+                    </svg>
+                  </a>
+                </FadeContent>
+              </div>
             </div>
           </div>
         </div>
@@ -314,23 +325,31 @@ export const Hero = () => {
         <div className="relative hero-img h-72 max-[450px]:h-50! max-[900px]:h-55 max-lg:h-65 w-80 max-[900px]:w-60 max-[450px]:w-55! max-lg:w-70 max-[900px]:order-1"></div>
       </div>
       <div className="flexy">
-        <span className="flexy flex-col gap-3 max-sm:gap-2 max-sm:text-sm">
-          <AnimatedContent
-            distance={30}
-            direction="vertical"
-            reverse={true}
-            duration={0.8}
-            ease="easeOut"
-            initialOpacity={0}
-            animateOpacity
-            scale={1}
-            threshold={0.2}
-            delay={0.2}
-          >
-            <h1>{t("Scroll Down")}</h1>
-          </AnimatedContent>
-          <MoveDown className="animate-[upDown_1.5s_ease-in-out_infinite] max-sm:size-5.5" />
-        </span>
+        <Link
+          to="about"
+          smooth={true}
+          duration={600}
+          offset={-120}
+          className="cursor-pointer"
+        >
+          <span className="flexy flex-col gap-3 max-sm:gap-2 max-sm:text-sm">
+            <AnimatedContent
+              distance={30}
+              direction="vertical"
+              reverse={true}
+              duration={0.8}
+              ease="easeOut"
+              initialOpacity={0}
+              animateOpacity
+              scale={1}
+              threshold={0.2}
+              delay={0.2}
+            >
+              <h1>{t("Scroll Down")}</h1>
+            </AnimatedContent>
+            <MoveDown className="animate-[upDown_1.5s_ease-in-out_infinite] max-sm:size-5.5" />
+          </span>
+        </Link>
       </div>
     </div>
   );

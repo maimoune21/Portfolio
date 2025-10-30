@@ -98,7 +98,7 @@ export const Available = () => {
                 delay={0.1}
               >
                 <span
-                  className={`h-11! w-11! max-sm:h-10! max-sm:w-10! cursor-pointer inline-flex items-center justify-center rounded-full shadow-[var(--custom-shadow)] ${
+                  className={`h-11! w-11! max-sm:h-10! max-sm:w-10! cursor-pointer inline-flex items-center justify-center rounded-full shadow-[var(--custom-shadow)] ButtonHover ${
                     theme === "light" ? "bg-[#d9e2e9]" : "bg-[#00bf6354]"
                   }`}
                 >
@@ -112,12 +112,7 @@ export const Available = () => {
           </TooltipContent>
         </Tooltip>
         <SheetContent side="bottom">
-          <SheetHeader>
-            <SheetTitle></SheetTitle>
-            <SheetDescription></SheetDescription>
-          </SheetHeader>
           <Contact />
-          <SheetFooter></SheetFooter>
         </SheetContent>
       </Sheet>
     </section>

@@ -166,7 +166,6 @@ const TextType = ({
     showCursor && (
       <span
         ref={cursorRef}
-        style={{ color: "black", opacity: 1 }}
         className={`ml-1 inline-block ${
           shouldHideCursor ? "hidden" : ""
         } ${cursorClassName}`}
