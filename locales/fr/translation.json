@@ -1,0 +1,271 @@
+{
+    "Home": "Accueil",
+    "About": "À propos",
+    "Skills": "Compétences",
+    "Projects": "Projets",
+    "Education & Experience": "Éducation et Expérience",
+    "Contact Me": "Contactez-moi",
+    "Full Stack Developer": "Développeur Full Stack",
+    "bio": "Bonjour, je suis Mohamed Maimoune, 21 ans, un Développeur Web Full-Stack passionné de Casablanca, Maroc. Je construis des applications web modernes et évolutives qui transforment les idées en expériences numériques.",
+    "Contact": "Contact",
+    "View CV": "Voir CV",
+    "Scroll Down": "Défiler vers le bas",
+    "About Me": "À propos de moi",
+    "Web Developer": "Développeur Web",
+    "IT Support Specialist": "Spécialiste du Support Informatique",
+    "about_paragraph_1": "En tant que Développeur Web Full-Stack Junior et Technicien Informatique de Casablanca, Maroc, je me spécialise dans la création d'applications modernes et évolutives avec React et Laravel. J'aime concevoir des solutions digitales complètes — des interfaces front-end intuitives aux API back-end sécurisées et efficaces. Mon expérience en maintenance informatique et support système renforce ma compréhension de la collaboration entre logiciel et matériel pour fournir des résultats fiables.",
+    "about_paragraph_2": "Animé par la curiosité et la croissance continue, j'explore constamment de nouvelles technologies et bonnes pratiques pour rester en avance dans un paysage technologique en évolution rapide. Mon travail reflète un équilibre solide entre code propre, expérience utilisateur et performance, et je m'efforce de créer des applications qui sont non seulement fonctionnelles et élégantes mais aussi significatives et impactantes — que je travaille indépendamment ou en équipe.",
+    "Skills & Technologies": "Compétences et Technologies",
+    "Frontend": "Frontend",
+    "Backend": "Backend",
+    "Databases": "Bases de données",
+    "Technologies": "Technologies",
+    "Each project is a unique piece of development": "Chaque projet est une pièce de développement unique",
+    "Open Project": "Ouvrir le Projet",
+    "mihna_description": "Une plateforme d'emploi full-stack connectant candidats et entreprises avec des offres d'emploi, suivi des candidatures, notifications en temps réel et support par chatbot IA.",
+    "okad_description": "Une plateforme scolaire responsive et optimisée SEO présentant les valeurs, activités et événements de l'école avec une interface utilisateur propre et dynamique.",
+    "youchef_description": "Une Plateforme de Recettes Collaborative permettant aux utilisateurs de partager et découvrir des recettes en temps réel. Conçue avec une interface moderne et responsive pour une expérience culinaire engageante et fluide.",
+    "foody_description": "Un Site Web de Restaurant Élégant et Responsive. Moderne et visuellement attrayant, conçu pour offrir une expérience utilisateur intuitive et fluide.",
+    "Education": "Éducation",
+    "Experience": "Expérience",
+    "education": {
+      "items": [
+        {
+          "title": "Diplôme de Technicien Spécialisé en Développement Full Stack",
+          "institution": "Institut Spécialisé de Formation aux Métiers du Offshoring de Casablanca (OFPPT)",
+          "location": "Casablanca, Maroc",
+          "period": "09/2023 - 07/2025"
+        },
+        {
+          "title": "Diplôme d'Agent de Maintenance Informatique",
+          "institution": "Centre de Formation d'Apprentissage Association Al Jisr",
+          "location": "Casablanca, Maroc",
+          "period": "11/2022 - 07/2023"
+        },
+        {
+          "title": "Baccalauréat en Sciences Physiques avec Option Française",
+          "institution": "Lycée Abdelkrim Lahlou",
+          "location": "Casablanca, Maroc",
+          "period": "09/2021 - 07/2022"
+        }
+      ]
+    },
+    "experience": {
+      "items": [
+        {
+          "title": "Projet de fin d'études",
+          "institution": "OFPPT - ISFO",
+          "period": "03/2025 - 07/2025",
+          "description": "Développer une plateforme d'emploi full-stack avec intégration d'un chatbot IA pour les candidats, entreprises et visiteurs.\\nIncluant les offres d'emploi, le suivi des candidatures, les notifications en temps réel et le tableau de bord administrateur, en utilisant React.js, Tailwind CSS, Laravel (API REST) et Gemini AI."
+        },
+        {
+          "title": "Participation au Hackathon 2025",
+          "institution": "OFPPT - ISGI",
+          "period": "06/2025 - 06/2025",
+          "description": "Créer une application web pour la location de locaux pendant le hackathon.\\nRécompense : 6ème prix"
+        },
+        {
+          "title": "Stage en développement web",
+          "institution": "Pragmatic Consulting",
+          "period": "03/2025 - 04/2025",
+          "description": "Développer une plateforme web de partage de recettes full-stack, travailler avec une équipe agile, de A à Z, en utilisant Laravel, React.js et Git"
+        },
+        {
+          "title": "Participation au Hackathon 2024",
+          "institution": "OFPPT - ISGI",
+          "period": "05/2024 - 05/2024",
+          "description": "Créer une plateforme de networking pendant le hackathon.\\nRécompense : 6ème prix"
+        },
+        {
+          "title": "Projet Personnel",
+          "institution": "OFPPT - ISFO",
+          "period": "02/2024 - 03/2024",
+          "description": "Développer un site web de restaurant responsive et moderne, partie front-end, en utilisant HTML5, CSS, JavaScript et Bootstrap, pour une expérience utilisateur intuitive."
+        },
+        {
+          "title": "Stage en maintenance informatique",
+          "institution": "Labdev Systems (Tersea)",
+          "period": "07/2023 - 08/2023",
+          "description": "Configurer et équiper les postes de travail informatiques, installer les câbles réseau et effectuer les tâches de bureau."
+        },
+        {
+          "title": "Stage en maintenance informatique",
+          "institution": "Atelier Green Chip - Al Jisr",
+          "period": "09/2021 - 07/2022",
+          "description": "Installer et configurer les systèmes d'exploitation, démonter les ordinateurs, écrans et imprimantes, et installer et configurer les caméras de surveillance."
+        }
+      ]
+    },
+    "Certificates": "Certificats",
+    "Open": "Ouvrir",
+    "certificates": {
+      "items": [
+        {
+          "name": "Introduction à SQL",
+          "photo": "Certif1.png",
+          "platform": "Coursera",
+          "owner": "University of Michigan",
+          "technologies": ["SQL", "MySQL", "PHP"],
+          "date": "24 fév 2024",
+          "link": "https://www.coursera.org/account/accomplishments/verify/K6AKK359FBV3"
+        },
+        {
+          "name": "Bases du matériel informatique",
+          "photo": "Certif2.png",
+          "platform": "Cisco",
+          "owner": "Cisco",
+          "technologies": ["Hardware", "IT"],
+          "date": "29 fév 2024",
+          "link": "https://www.credly.com/badges/6abe46f0-ffd5-4b48-9c4e-9d1286b347e6/print"
+        },
+        {
+          "name": "Cours CSS et JavaScript",
+          "photo": "Certif3.png",
+          "platform": "Udemy",
+          "owner": "Udemy",
+          "technologies": ["CSS", "JavaScript"],
+          "date": "10 oct 2024",
+          "link": "https://www.udemy.com/certificate/UC-10ff69bb-eef2-4083-987c-25359c575696/"
+        },
+        {
+          "name": "Introduction à SQL",
+          "photo": "Certif4.png",
+          "platform": "Coursera",
+          "owner": "IBM",
+          "technologies": ["SQL", "Data Analysis"],
+          "date": "24 fév 2024",
+          "link": "https://www.coursera.org/account/accomplishments/verify/C8RX5R2PM2VC"
+        },
+        {
+          "name": "Microsoft Excel 365",
+          "photo": "Certif5.png",
+          "platform": "Udemy",
+          "owner": "Udemy",
+          "technologies": ["Excel"],
+          "date": "09 oct 2025",
+          "link": "https://www.udemy.com/certificate/UC-d272edd3-5400-406c-aea7-d94ef3e8c523/"
+        },
+        {
+          "name": "Introduction à la cybersécurité",
+          "photo": "Certif6.png",
+          "platform": "Cisco",
+          "owner": "Cisco",
+          "technologies": ["Cybersecurity"],
+          "date": "29 fév 2024",
+          "link": "https://www.credly.com/badges/6c3d2064-3cf3-4d06-b349-ca62a9c2f2c8/print"
+        },
+        {
+          "name": "Bootcamp Figma UI/UX",
+          "photo": "Certif7.png",
+          "platform": "Udemy",
+          "owner": "Udemy",
+          "technologies": ["Figma", "UI/UX"],
+          "date": "29 fév 2024",
+          "link": "https://www.udemy.com/certificate/UC-d83cd3b1-5a7d-4cf5-87a2-6b32be25d77e/"
+        },
+        {
+          "name": "Apprendre HTML et CSS",
+          "photo": "Certif8.png",
+          "platform": "Coursera",
+          "owner": "Scrimba",
+          "technologies": ["Html", "Css"],
+          "date": "13 août 2023",
+          "link": "https://www.coursera.org/account/accomplishments/verify/GWHYDV29R2JZ"
+        },
+        {
+          "name": "Git et Github",
+          "photo": "Certif9.png",
+          "platform": "Udemy",
+          "owner": "Udemy",
+          "technologies": ["Git", "Github"],
+          "date": "20 sep 2024",
+          "link": "https://www.udemy.com/certificate/UC-2a07646d-1afe-4f07-bae1-8c4a46bffe38/"
+        },
+        {
+          "name": "Essentiels de Python",
+          "photo": "Certif10.png",
+          "platform": "Cisco",
+          "owner": "Python Institute",
+          "technologies": ["Python"],
+          "date": "29 fév 2024",
+          "link": "https://www.credly.com/badges/f9d04c28-fc72-4f91-91ed-27675592acd7/print"
+        },
+        {
+          "name": "Introduction à JavaScript",
+          "photo": "Certif11.png",
+          "platform": "Udemy",
+          "owner": "Udemy",
+          "technologies": ["Jvascript"],
+          "date": "11 sep 2024",
+          "link": "https://www.udemy.com/certificate/UC-787d0d0a-bf7a-4244-9abf-c095770b6fde/"
+        },
+        {
+          "name": "Créer une page web avec HTML & CSS",
+          "photo": "Certif12.png",
+          "platform": "Coursera",
+          "owner": "Board Infinity",
+          "technologies": ["Html", "Css", "UI/UX"],
+          "date": "18 août 2023",
+          "link": "https://www.coursera.org/account/accomplishments/verify/PLWUFJJ7VWRW"
+        },
+        {
+          "name": "Guide d'apprentissage Front End Web",
+          "photo": "Certif13.png",
+          "platform": "Udemy",
+          "owner": "Udemy",
+          "technologies": ["Html", "Css", "Js", "Bootstrap"],
+          "date": "23 oct 2024",
+          "link": "https://www.udemy.com/certificate/UC-b781e881-4926-49cc-a6c9-ce23e13bf5a8/"
+        },
+        {
+          "name": "Guide d'apprentissage Java",
+          "photo": "Certif14.png",
+          "platform": "Udemy",
+          "owner": "Udemy",
+          "technologies": ["Java"],
+          "date": "23 oct 2024",
+          "link": "https://www.udemy.com/certificate/UC-a2759875-ea7c-4879-ae74-59b16d534bdd/"
+        }
+      ]
+    },
+    "Resume": "CV",
+    "Available for work": "Disponible pour travailler",
+    "Let's build something": "Construisons quelque chose",
+    "incredible together!": "d'incroyable ensemble !",
+    "2025 Mohamed Maimoune. All rights reserved": "2025 Mohamed Maimoune. Tous droits réservés",
+    "Let's start a project together": "Commençons un projet ensemble",
+    "Name": "Nom",
+    "Email": "Email",
+    "Message": "Message",
+    "Text Message...": "Votre message...",
+    "Send Message": "Envoyer le message",
+    "Copyright 2025 · Made by": "Copyright 2025 · Créé par",
+    "Coming Soon": "Bientôt disponible",
+    "Something new is coming — stay tuned.": "Quelque chose de nouveau arrive — restez à l'écoute.",
+    "Job Platform Connecting Candidates & Employers": "Plateforme d’emploi connectant candidats et employeurs",
+    "mihna_description_1": "Avant Mihna, les chercheurs d’emploi et les recruteurs faisaient souvent face à des processus de recrutement fragmentés : les candidats avaient du mal à trouver des opportunités pertinentes, tandis que les recruteurs rencontraient des difficultés pour gérer et suivre les candidatures efficacement. Les lacunes de communication et l’absence d’outils intelligents rendaient l’embauche lente et inefficace.",
+    "mihna_description_2": "Mihna est une plateforme web full-stack qui comble cette lacune en connectant candidats et employeurs via un système intelligent et rationalisé. Elle propose un suivi automatique des candidatures, des notifications en temps réel et un assistant chatbot intégré — aidant les deux parties à gagner du temps, rester organisées et prendre des décisions de carrière plus intelligentes.",
+    "The Challenge": "Le défi",
+    "mihna_challenge": "Comment créer une expérience de mise en relation fluide tout en gardant la plateforme simple et efficace pour les candidats comme pour les entreprises ? Notre objectif n’était pas de simplement reproduire les portails d’emploi existants, mais d’aller au-delà : offrir des recommandations intelligentes, des candidatures simplifiées et une interaction en temps réel entre talents et employeurs.",
+    "Platform Features & Functionalities": "Fonctionnalités de la plateforme",
+    "Candidate Features & Functionalities": "Fonctionnalités pour les candidats",
+    "Applying For a Job": "Postuler à une offre",
+    "Company Features & Functionalities": "Fonctionnalités pour les entreprises",
+    "View On LinkedIn": "Voir sur LinkedIn",
+    "Explore More Work": "Voir plus de réalisations",
+    "Authentication Page": "Page d’authentification",
+    "Company dashboard": "Tableau de bord entreprise",
+    "Company Profile Page": "Page de profil entreprise",
+    "Analysis Page": "Page d’analyse",
+    "Job Applications Page Groups by Job": "Page « Candidatures » groupées par offre",
+    "Adding a job offer": "Ajout d’une offre d’emploi",
+    "Confirmation of data for adding a job offer": "Confirmation des données pour l’ajout d’une offre",
+    "Form to edit the job": "Formulaire de modification de l’offre",
+    "Home Page": "Page d’accueil",
+    "Profile Page": "Page de profil",
+    "Job Offers Page": "Page des offres d’emploi",
+    "Mihna Chatbot": "Chatbot Mihna",
+    "Job Offer Details Page": "Page de détails de l’offre d’emploi",
+    "Statistics and testimonials sections": "Sections statistiques et témoignages",
+    "Top Companies and Popular Jobs sections": "Sections Top entreprises et Offres populaires"    
+}
