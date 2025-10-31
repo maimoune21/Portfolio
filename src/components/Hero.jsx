@@ -18,7 +18,6 @@ import TextType from "./flowBits/TextType";
 import AnimatedContent from "./flowBits/AnimatedContent";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FloatingBubbles } from "./ui/FloatingBubbles";
 
 export const Hero = () => {
   const { t, i18n } = useTranslation();
