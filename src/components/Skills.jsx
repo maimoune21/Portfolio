@@ -10,7 +10,7 @@ import SplitText from "./flowBits/SplitText";
 import FadeContent from "./flowBits/FadeContent";
 
 export const Skills = () => {
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState("Frontend");
   const [underlineStyle, setUnderlineStyle] = useState({});
   const tabsRef = useRef([]);
@@ -182,6 +182,7 @@ export const Skills = () => {
       </div>
 
       <div
+        key={activeTab}
         className="grid grid-cols-6 max-[400px]:grid-cols-5 max-[300px]:grid-cols-4! gap-4 max-sm:gap-0 max-md:gap-2 max-[400px]:gap-y-2 max-sm:gap-y-4 w-[55%] max-[400px]:w-full max-[500px]:w-[90%] max-sm:w-[90%] max-md:w-[90%] max-lg:w-[80%] m-auto mt-6 rounded-lg bg-[var(--bg-skills)] p-4 max-sm:px-2 shadow-[var(--custom-shadow)]"
         style={{
           backgroundImage:
@@ -196,13 +197,14 @@ export const Skills = () => {
             className="flex flex-col items-center bg-[var(--bg-skills-2)] max-sm:bg-transparent max-sm:shadow-none py-3 max-sm:py-1 rounded-xl gap-2 shadow-sm max-sm:w-fit max-sm:m-auto"
           >
             <Tooltip>
-              <FadeContent
-                blur={true}
-                duration={1100}
-                easing="ease-out"
-                initialOpacity={0}
-              >
-                <TooltipTrigger>
+              <TooltipTrigger>
+                <FadeContent
+                  blur={true}
+                  duration={800}
+                  easing="ease-out"
+                  initialOpacity={0}
+                  delay={index * 100}
+                >
                   <img
                     src={`/photos/stacks/${stack.logo}`}
                     className={`${
@@ -214,8 +216,8 @@ export const Skills = () => {
                     }`}
                     alt={stack.title}
                   />
-                </TooltipTrigger>
-              </FadeContent>
+                </FadeContent>
+              </TooltipTrigger>
               <TooltipContent className="min-sm:hidden">
                 <p>{stack.title}</p>
               </TooltipContent>
