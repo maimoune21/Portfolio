@@ -17,6 +17,8 @@ import SplitText from "./flowBits/SplitText";
 import TextType from "./flowBits/TextType";
 import AnimatedContent from "./flowBits/AnimatedContent";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+import { FloatingBubbles } from "./ui/FloatingBubbles";
 
 export const Hero = () => {
   const { t, i18n } = useTranslation();
@@ -322,7 +324,116 @@ export const Hero = () => {
             cursorCharacter="|"
           />
         </span>
-        <div className="relative hero-img h-72 max-[450px]:h-50! max-[900px]:h-55 max-lg:h-65 w-80 max-[900px]:w-60 max-[450px]:w-55! max-lg:w-70 max-[900px]:order-1"></div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="relative"
+        >
+          <div className="absolute inset-0 z-10">
+            {/* Bubbles */}
+            <motion.div
+              className="absolute -top-4 max-sm:top-2 -right-4 max-sm:right-2 w-3 h-3 rounded-full bg-gradient-to-br from-gray-500/40 to-gray-300/30 backdrop-blur-sm"
+              animate={{
+                y: [0, -10, 0],
+                x: [0, 5, 0],
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <motion.div
+              className="absolute -top-8 max-sm:-top-6 right-8 max-sm:right-8 w-2 h-2 rounded-full bg-gradient-to-br from-gray-500/30 to-gray-300/20 backdrop-blur-sm"
+              animate={{
+                y: [0, -8, 0],
+                x: [0, -3, 0],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 3.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5,
+              }}
+            />
+            <motion.div
+              className="absolute -bottom-6 max-sm:bottom-10 -left-4 max-sm:left-4 w-3 h-3 rounded-full bg-gradient-to-br from-gray-500/35 to-gray-300/25 backdrop-blur-sm"
+              animate={{
+                y: [0, 12, 0],
+                x: [0, -4, 0],
+                scale: [1, 1.15, 1],
+              }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.3,
+              }}
+            />
+            <motion.div
+              className="absolute -bottom-10 max-sm:bottom-0 left-4 max-sm:left-8 w-3 h-3 rounded-full bg-gradient-to-br from-gray-500/25 to-gray-300/15 backdrop-blur-sm"
+              animate={{
+                y: [0, 8, 0],
+                x: [0, 2, 0],
+                scale: [1, 1.3, 1],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.8,
+              }}
+            />
+            <motion.div
+              className="absolute bottom-1/4 max-sm:bottom-10 -right-0 max-sm:right-8 w-2 h-2 rounded-full bg-gradient-to-br from-gray-500/40 to-gray-300/30 backdrop-blur-sm"
+              animate={{
+                y: [0, -6, 0, 6, 0],
+                x: [0, 4, 0, -4, 0],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.2,
+              }}
+            />
+            <motion.div
+              className="absolute top-1/3 max-sm:top-10 -left-0 max-sm:left-8 w-2 h-2 rounded-full bg-gradient-to-br from-gray-500/30 to-gray-300/20 backdrop-blur-sm"
+              animate={{
+                y: [0, 8, 0, -8, 0],
+                x: [0, -3, 0, 3, 0],
+              }}
+              transition={{
+                duration: 4.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.7,
+              }}
+            />
+          </div>
+
+          {/* Background blobs */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-500/20 via-gray-500/10 to-transparent rounded-full blur-2xl animate-pulse-slow" />
+          <div className="absolute inset-0 bg-gradient-to-tl from-gray-500/20 via-gray-500/10 to-transparent rounded-full blur-2xl animate-pulse-slow animation-delay-500" />
+
+          {/* Main image container */}
+          <div className="relative w-full h-full rounded-full z-20">
+            <div className="relative hero-img group h-72 max-[450px]:h-50! max-[900px]:h-55 max-lg:h-65 w-80 max-[900px]:w-60 max-[450px]:w-55! max-lg:w-70 max-[900px]:order-1 rounded-full overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-lg font-bold text-center select-none">
+                  FullStack Developer
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Optional decorative blobs */}
+          <div className="absolute -top-8 right-4 w-12 h-12 bg-gray-300 rounded-full blur-lg animate-pulse-slow" />
+          <div className="absolute -bottom-6 left-4 w-12 h-12 bg-gray-300 rounded-full blur-lg animate-pulse-slow animation-delay-500" />
+        </motion.div>
       </div>
       <div className="flexy">
         <Link
